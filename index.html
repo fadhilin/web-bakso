@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bakso Gacor</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- ICON -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <section class="hero"">
+      <div class="navbar">
+        <!-- Logo -->
+        <div class="logo-bakso">
+          <a href="#hero"
+            ><img
+              src="./assets/images/Logo Bakso.png"
+              alt="Bakso Gacor Mang Idun"
+            />
+          </a>
+        </div>
+        <!-- Searching -->
+        <div class="search-container">
+          <div class="search-box">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Cari menu disini..."
+              autocomplete="off"
+            />
+            <button onclick="searchProducts()">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Filtering -->
+        <div class="filter-container">
+          <button class="filter-btn" onclick="toggleFilter(event)">
+            <i class="fa fa-filter"> </i>Filter
+          </button>
+        </div>
+
+        <div class="filter-dropdown" id="filterDropdown">
+          <div class="filter-section">
+            <h4>Harga</h4>
+            <label>
+              <input
+                type="radio"
+                name="price"
+                value="all"
+                checked
+                onchange="applyFilters()"
+              />
+              Semua
+            </label>
+          </div>
+          <div class="filter-section">
+            <label>
+              <input
+                type="radio"
+                name="price"
+                value="high-to-low"
+                onchange="applyFilters()"
+              />
+              Harga Tertinggi ke Terendah
+            </label>
+          </div>
+          <div class="filter-section">
+            <label>
+              <input
+                type="radio"
+                name="price"
+                value="low-to-high"
+                onchange="applyFilters()"
+              />
+              Harga Terendah ke Tertinggi
+            </label>
+          </div>
+        </div>
+        <!-- Keranjang Belanja -->
+        <div class="cart-container">
+          <button class="cart-btn" onclick="toggleCart(event)">
+            <i class="fa fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+          </button>
+        </div>
+
+        <div class="cart-dropdown" id="cartDropdown">
+          <div class="cart-header">
+            <h3>Keranjang Belanja</h3>
+            <button
+              class="clear-all"
+              onclick="clearAllCart()"
+              id="clearCartBtn"
+              style="display: none"
+            >
+              <i class="fa fa-trash"></i> Hapus Semua
+            </button>
+          </div>
+
+          <div class="cart-items">
+            <div class="cart-empty">
+              <p>Keranjang Kosong, <br />Tambahin Produk Yuk!</p>
+            </div>
+          </div>
+
+          <div class="cart-checkout">
+            <div class="cart-total">
+              <span>Total:</span>
+              <span class="total-price" id="totalPrice">$0</span>
+            </div>
+            <button class="checkout-btn" onclick="checkout(event)">
+              Checkout
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="arrow-top" title="Move to top page"> ↑ </a>
+
+      <div class="hero-text">
+        <h1>BAKSO GACOR MANG IDUN</h1>
+        <p>
+          <span class="text-animasi"
+            >bakso gacor yang paling gacor sejabodetabek</span
+          >
+          <span class="span-text">bakso murah meriah cuman ada disini</span>
+          <span class="span-baru"
+            >scroll kebawah untuk lihat menu lainnya...</span
+          >
+        </p>
+      </div>
+    </section>
+    <div id="productList"></div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+  </body>
+</html>

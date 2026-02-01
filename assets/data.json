@@ -1,0 +1,52 @@
+[
+  {
+    "id": "bakso-pangsit",
+    "title": "Bakso Pangsit",
+    "subtitle": "Perpaduan sempurna bakso kenyal dengan pangsit basah kenyal.",
+    "description": "Bakso sapi pilihan disajikan dengan pangsit basah kenyal, kuah kaldu sapi kental, dan taburan bawang goreng serta seledri segar.",
+    "detail_description": "Bakso dibuat dari daging sapi pilihan tanpa campuran tepung berlebih sehingga teksturnya kenyal alami. Pangsit direbus dengan api sedang agar ketika dimakan lembut dan kenyal di dalam.\n\nKuah kaldu direbus selama 6 jam dari tulang sapi sumsum untuk menghasilkan rasa gurih mendalam. Dilengkapi sambal khas dan kecap manis untuk melengkapi cita rasa.",
+    "price": 14000,
+    "image": "assets/images/bakso-pangsit.png",
+    "accent": "#ff6b6b"
+  },
+  {
+    "id": "bakso-tahu",
+    "title": "Bakso Tahu",
+    "subtitle": "Kombinasi lezat bakso empuk dengan tahu putih dan tahu coklat yang berisi aci.",
+    "description": "Bakso sapi asli dipadukan dengan tahu putih dan juga tahu coklat yang berisi aci dan lembut di dalam, disiram kuah kaldu hangat dengan bumbu rahasia.",
+    "detail_description": "Tahu putih dipotong kotak kemudian direbus dengan api sedang dan Tahu coklat yang disi aci agar ketika dimakan lembut didalam hingga ketika dimakan terasa kenyal. Bakso menggunakan daging sapi segar yang digiling halus dengan bumbu tradisional.\n\nKuah kaldu menggunakan resep turun temurun dengan tambahan bawang putih goreng dan merica hitam. Tekstur tahu yang crispy kontras sempurna dengan lembutnya bakso.",
+    "price": 14000,
+    "image": "assets/images/bakso-tahu.png",
+    "accent": "#4ecdc4"
+  },
+  {
+    "id": "bakso-biasa",
+    "title": "Bakso Biasa",
+    "subtitle": "Klasik yang tak lekang waktu dengan rasa autentik.",
+    "description": "Bakso sapi murni dengan tekstur kenyal pas, disajikan dalam kuah kaldu sapi original. Sederhana namun memuaskan.",
+    "detail_description": "Bakso dibuat fresh setiap hari dari daging sapi murni tanpa bahan pengawet. Proses pembuatan manual memastikan setiap bakso punya tekstur kenyal yang konsisten.\n\nKuah kaldu original tanpa MSG, hanya mengandalkan rasa natural dari tulang sapi dan rempah pilihan. Cocok untuk yang menginginkan rasa autentik bakso tradisional.",
+    "price": 10000,
+    "image": "assets/images/bakso-biasa.png",
+    "accent": "#ffd93d"
+  },
+  {
+    "id": "bakso-komplit",
+    "title": "Bakso Komplit",
+    "subtitle": "Sajian lengkap untuk kepuasan maksimal.",
+    "description": "Kombinasi bakso sapi, bakso urat, pangsit basah, tahu putih, tahu coklat isi, dan  mie kuning dalam kuah kaldu spesial. Porsi besar untuk perut lapar.",
+    "detail_description": "Paket all-in-one yang memadukan berbagai tekstur dan rasa. Bakso urat memberikan sensasi kenyal berbeda dari bakso biasa, sementara mie kuning menambah kekenyangan.\n\nTelur direbus setengah matang dengan kuning yang masih creamy. Kuah kaldu premium disiram panas di atas semua bahan sehingga aromanya langsung menggugah selera. Porsi jumbo cocok untuk makan siang atau malam.",
+    "price": 17000,
+    "image": "assets/images/bakso-komplit.png",
+    "accent": "#ff8c42"
+  },
+  {
+    "id": "bakso-gacor",
+    "title": "Bakso Gacor",
+    "subtitle": "Level pedas maksimal untuk pencinta sensasi ekstrem.",
+    "description": "Bakso jumbo dengan campuran bakso urat, pangsit basah, tahu putih ,tahu coklat dan mie kuning dalam kuah kaldu pedas berapi. Ditambah sambal rawit setan dan cabai merah giling. Tantangan untuk yang berani!",
+    "detail_description": "Bakso jumbo seukuran bola padel dipadukan dengan bakso urat yang super kenyal. Kuah kaldu dibumbui cabai rawit segar, cabai merah keriting, dan saus pedas rahasia yang bikin keringat bercucuran.\n\nSambal rawit setan digiling kasar dengan bawang putih dan terasi untuk ledakan rasa pedas yang kompleks. Level kepedasan bisa disesuaikan: mild gacor, medium gacor, atau extreme gacor untuk yang pro.",
+    "price": 20000,
+    "image": "assets/images/bakso-gacor.png",
+    "accent": "#e63946"
+  }
+]

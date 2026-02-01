@@ -1,0 +1,51 @@
+body {
+  background-color: #05070c;
+}
+
+.detail {
+  max-width: 900px;
+  margin: -15px auto;
+  padding: 24px 16px 60px;
+  display: grid;
+  gap: 14px;
+}
+
+.detail-card {
+  color: white;
+  background: linear-gradient(90deg, #b71c1c, #ff2e2e, #ff6f00);
+  border: 1px solid #1a1c24;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 18px 60px -40px rgba(0, 0, 0, 0.5);
+}
+
+.detail-hero {
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.detail-hero::after {
+  content: "";
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+}
+
+.detail-body {
+  padding: 18px;
+  display: grid;
+  gap: 12px;
+}
+
+.detail-body p {
+  color: rgb(247, 248, 255);
+  line-height: 1.6;
+}
+
+.back {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
