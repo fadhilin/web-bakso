@@ -314,7 +314,7 @@ function checkout(event) {
     .join("\n");
 
   alert(
-    `Checkout Berhasil!\n\n${itemList}\n\nTotal Pembayaran: $${total.toLocaleString()}\n\nTerima kasih telah berbelanja!`,
+    `Checkout Berhasil!\n\n${itemList}\n\nTotal Pembayaran: Rp. ${total.toLocaleString()}\n\nTerima kasih telah berbelanja!`,
   );
 
   cart = [];
