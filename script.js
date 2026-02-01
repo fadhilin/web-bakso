@@ -306,12 +306,17 @@ function checkout(event) {
     return;
   }
 
+  // Format Rupiah
+  const rupiah = new Intl.NumberFormat("id-ID", {
+    style: "currency",
+    currency: "IDR",
+    minimumFractionDigits: 0,
+  });
+
   const total = cart.reduce((sum, item) => {
-    const price = parseFloat(item.price.replace("Rp.", ""));
-    return sum + price * item.quantity;
+    return sum + Number(item.price) * item.quantity;
   }, 0);
 
-  // Format setiap item untuk pesan ke WA saat klik checkout
   const itemList = cart
     .map(
       (item) =>
@@ -319,7 +324,6 @@ function checkout(event) {
     )
     .join("%0A");
 
-  // Pesan lengkap yang dikirim ke wa
   const message =
     `Halo, saya ingin melakukan pemesanan:%0A` +
     `%0A` +
@@ -329,13 +333,13 @@ function checkout(event) {
     `%0A` +
     `Terima kasih!`;
 
-  // Nomor WA
   const phoneNumber = "62895324895618";
 
   window.open(
     `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`,
     "_blank",
   );
+
   cart = [];
   updateCart();
   saveCartToStorage();
