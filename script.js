@@ -274,6 +274,7 @@ function updateCart() {
   totalPrice.textContent = `Rp. ${total.toLocaleString()}`;
 }
 
+// Update/kurangi item keranjang
 function updateQuantity(event, id, change) {
   event.stopPropagation();
   const item = cart.find((item) => item.id === id);
@@ -287,7 +288,7 @@ function updateQuantity(event, id, change) {
     }
   }
 }
-
+// Hapus item dari keranjang
 function removeItem(event, id) {
   event.stopPropagation();
   cart = cart.filter((item) => item.id !== id);
@@ -296,6 +297,7 @@ function removeItem(event, id) {
   showNotification("Produk dihapus dari keranjang");
 }
 
+// Checkout
 function checkout(event) {
   if (event) event.stopPropagation();
 
@@ -309,20 +311,30 @@ function checkout(event) {
     return sum + price * item.quantity;
   }, 0);
 
+  // Format setiap item untuk pesan ke WA saat klik checkout
   const itemList = cart
-    .map((item) => `${item.title} (${item.quantity}x)`)
-    .join("\n");
+    .map(
+      (item) =>
+        `${item.title} x${item.quantity} - ${rupiah.format(Number(item.price) * item.quantity)}`,
+    )
+    .join("%0A");
 
-  const rupiah = new Intl.NumberFormat("id-ID", {
-    style: "currency",
-    currency: "IDR",
-    minimumFractionDigits: 0,
-  });
+  // Pesan lengkap yang dikirim ke wa
+  const message =
+    `Halo, saya ingin melakukan pemesanan:%0A` +
+    `%0A` +
+    `${itemList}%0A` +
+    `%0A` +
+    `Total Pembayaran: ${rupiah.format(total)}%0A` +
+    `%0A` +
+    `Terima kasih!`;
 
-  alert(
-    `Checkout Berhasil!\n\n${itemList}\n\nTotal Pembayaran: ${rupiah.format(
-      total,
-    )}\n\nTerima kasih telah berbelanja!`,
+  // Nomor WA
+  const phoneNumber = "62895324895618";
+
+  window.open(
+    `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`,
+    "_blank",
   );
   cart = [];
   updateCart();
@@ -331,7 +343,7 @@ function checkout(event) {
   const cartDropdown = document.getElementById("cartDropdown");
   cartDropdown.classList.remove("active");
 }
-
+// Hapus semua dari keranjang
 function clearAllCart(event) {
   if (event) event.stopPropagation();
 
