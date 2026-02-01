@@ -313,10 +313,17 @@ function checkout(event) {
     .map((item) => `${item.title} (${item.quantity}x)`)
     .join("\n");
 
-  alert(
-    `Checkout Berhasil!\n\n${itemList}\n\nTotal Pembayaran: Rp. ${total.toLocaleString()}\n\nTerima kasih telah berbelanja!`,
-  );
+  const rupiah = new Intl.NumberFormat("id-ID", {
+    style: "currency",
+    currency: "IDR",
+    minimumFractionDigits: 0,
+  });
 
+  alert(
+    `Checkout Berhasil!\n\n${itemList}\n\nTotal Pembayaran: ${rupiah.format(
+      total,
+    )}\n\nTerima kasih telah berbelanja!`,
+  );
   cart = [];
   updateCart();
   saveCartToStorage();
